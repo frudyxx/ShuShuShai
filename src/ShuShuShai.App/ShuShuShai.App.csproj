@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><AssemblyName>舒舒筛</AssemblyName><RootNamespace>ShuShuShai.App</RootNamespace>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier><ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>0.3.5</Version>
+    <DefineConstants Condition="'$(UpdateTestBuild)' == 'true'">$(DefineConstants);UPDATE_TEST_BUILD</DefineConstants>
+    <ApplicationIcon>Assets\ShuShuShai.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../ShuShuShai.Core/ShuShuShai.Core.csproj" /></ItemGroup>
+  <ItemGroup><Resource Include="Assets\ShuShuShai.ico" /></ItemGroup>
+  <ItemGroup><InternalsVisibleTo Include="ShuShuShai.Specs" /></ItemGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="UpdateReleaseRepository" Value="$(UpdateReleaseRepository)" Condition="'$(UpdateReleaseRepository)' != ''" />
+    <AssemblyMetadata Include="UpdateSigningCertificateSha256" Value="$(UpdateSigningCertificateSha256)" Condition="'$(UpdateSigningCertificateSha256)' != ''" />
+  </ItemGroup>
+</Project>

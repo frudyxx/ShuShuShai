@@ -1,0 +1,70 @@
+# .NET build output and local IDE state
+[Bb]in/
+[Oo]bj/
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+*_wpftmp.csproj
+
+# Generated packages, tests, caches, and local work
+/artifacts/
+/dist/
+/publish/
+/releases/
+TestResults/
+coverage/
+.cache/
+.work/
+/tmp/
+/temp/
+*.log
+
+# Runtime databases and local photo work folders
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+/user-data/
+/photo-input/
+/photo-output/
+
+# Source camera photos are not project assets.
+# Deliberately chosen test fixtures can have a narrow allow rule added later.
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[aA][rR][wW]
+*.[sS][rR][2]
+*.[sS][rR][fF]
+*.[cC][rR][wW]
+*.[cC][rR][2]
+*.[cC][rR][3]
+*.[nN][eE][fF]
+*.[nN][rR][wW]
+*.[rR][aA][fF]
+*.[dD][nN][gG]
+*.[rR][wW][2]
+*.[oO][rR][fF]
+*.[pP][eE][fF]
+*.[sS][rR][wW]
+*.[rR][aA][wW]
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+
+# Keep shared VS Code configuration tracked.
+
+/.codex-attachments/

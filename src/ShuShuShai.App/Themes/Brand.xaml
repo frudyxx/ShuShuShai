@@ -1,0 +1,26 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <StreamGeometry x:Key="FilmFold">M84 20H39L19 36V49L32 60H56L69 46H38L32 40L43 32H71Z</StreamGeometry>
+  <DrawingGroup x:Key="BrandMark">
+    <GeometryDrawing Geometry="M0,0 H100 V100 H0 Z" Brush="Transparent"/>
+    <GeometryDrawing Geometry="{StaticResource FilmFold}" Brush="#EAC17B"/>
+    <DrawingGroup>
+      <DrawingGroup.Transform><RotateTransform Angle="180" CenterX="50" CenterY="50"/></DrawingGroup.Transform>
+      <GeometryDrawing Geometry="{StaticResource FilmFold}" Brush="#EAC17B"/>
+    </DrawingGroup>
+    <GeometryDrawing Geometry="M37,63 L63,37">
+      <GeometryDrawing.Pen><Pen Brush="#1A1816" Thickness="4.2"/></GeometryDrawing.Pen>
+    </GeometryDrawing>
+  </DrawingGroup>
+  <DrawingImage x:Key="BrandMarkImage" Drawing="{StaticResource BrandMark}"/>
+  <DrawingImage x:Key="BrandIconImage">
+    <DrawingImage.Drawing>
+      <DrawingGroup>
+        <GeometryDrawing Brush="#191816">
+          <GeometryDrawing.Geometry><RectangleGeometry Rect="1.5,1.5,97,97" RadiusX="22" RadiusY="22"/></GeometryDrawing.Geometry>
+          <GeometryDrawing.Pen><Pen Brush="#544937" Thickness="3"/></GeometryDrawing.Pen>
+        </GeometryDrawing>
+        <StaticResource ResourceKey="BrandMark"/>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+</ResourceDictionary>
